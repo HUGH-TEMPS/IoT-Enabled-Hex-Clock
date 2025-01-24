@@ -9,7 +9,7 @@ This project enhances the original 3D-printed **Hex Clock** by [SHDesigns](https
 
 ## Modifications
 This project is a derivative of the **Hex Clock** by SHDesigns. The following modifications were made:
-- Added IoT functionality using an ESP32 microcontroller.
+- Added IoT functionality using an ESP8266 microcontroller.
 - Integrated a Telegram bot for remote control of the clock's numbers.
 - Adjusted the original 3D model to accommodate additional electronic components.
 
@@ -40,15 +40,37 @@ The IoT code included in this project is licensed under the **MIT License**. Thi
    - Download and print the modified Hex Clock STL files included in this repository.
 2. **Hardware Setup**:
    - Assemble the clock using the 3D-printed parts and electronic components.
+   - Refer to the following image for the pins for the motor and ESP32:
+
+     ![Motor and ESP32 Pins](images/Screenshot%202025-01-24%20213003.png)
+
 3. **IoT Integration**:
-   - Upload the provided IoT code to the ESP32 microcontroller.
-   - Follow the included instructions to set up the Telegram bot.
+   - Upload the provided IoT code to the ESP8266 microcontroller.
+   - Set up the Telegram bot as follows:
+     - Obtain your bot token from [BotFather](https://t.me/BotFather). Use the following code snippet in your program:
+       ```cpp
+       // Telegram Bot Token
+       String BOTtoken = "";  // Your Bot Token
+       // Create the bot here https://t.me/BotFather
+       ```
+       ![BotFather Screenshot](images/Screenshot%202025-01-24%20215802.png)
+
+     - Authorize user chat IDs:
+       ```cpp
+       // Authorized User Chat IDs
+       String authorizedChatIDs[] = {"0123456789"};
+       // Get your ID here https://t.me/myidbot
+       ```
+       ![IDBot Screenshot](images/Screenshot%202025-01-24%20215832.png)
+
+   - Follow the included instructions to finalize the Telegram bot setup.
+
 4. **Testing**:
    - Test the Telegram chatbot to ensure it controls the clock's numbers as expected.
 
 ## Repository Contents
 - `STL_Files/`: Contains the 3D design files for printing.
-- `Code/`: Includes the Arduino sketch for the ESP32 and Telegram bot.
+- `Code/`: Includes the Arduino sketch for the ESP8266 and Telegram bot.
 - `Docs/`: Assembly instructions and wiring diagrams.
 - `LICENSE`: The Creative Commons Attribution-NonCommercial-ShareAlike license.
 
