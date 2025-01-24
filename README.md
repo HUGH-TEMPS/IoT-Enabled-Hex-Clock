@@ -9,7 +9,7 @@ This project enhances the original 3D-printed **Hex Clock** by [SHDesigns](https
 
 ## Modifications
 This project is a derivative of the **Hex Clock** by SHDesigns. The following modifications were made:
-- Added IoT functionality using an ESP8266 microcontroller.
+- Added IoT functionality using an ESP32-CAM microcontroller.
 - Integrated a Telegram bot for remote control of the clock's numbers.
 - Adjusted the original 3D model to accommodate additional electronic components.
 
@@ -45,7 +45,7 @@ The IoT code included in this project is licensed under the **MIT License**. Thi
      ![Motor and ESP32 Pins](images/Screenshot%202025-01-24%20213003.png)
 
 3. **IoT Integration**:
-   - Upload the provided IoT code to the ESP8266 microcontroller.
+   - Upload the provided IoT code to the ESP32-CAM microcontroller.
    - Set up the Telegram bot as follows:
      - Obtain your bot token from [BotFather](https://t.me/BotFather). Use the following code snippet in your program:
        ```cpp
